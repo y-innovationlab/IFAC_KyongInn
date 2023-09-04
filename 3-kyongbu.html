@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>경인철도가 (1번 재생 화면)</title>
+  <base href="./">
+  <!-- Include font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+
+  <!-- Include Amplitude JS -->
+  <script type="text/javascript" src="./src/js/amplitude.js"></script>
+  <!-- Include Style Sheet -->
+<!--  <link rel="stylesheet" type="text/css" href="./css/origin.css"/>-->
+  <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/playOnly.css"/>
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+    <button>
+      <img src="img/back-icon.svg">
+      <span onclick="goBack()">뒤로가기</span>
+    </button>
+    <!--<img src="img/ifac-logo.svg">-->
+  </div>
+  <div id="top-container">
+
+    <div id="train-info">
+      <div id="train-name">용산역</div>
+      <div id="train-description">1955년 당시 사진</div>
+    </div>
+
+    <div id="train-line">
+      <div id="train-img">
+        <img src="img/train_single.svg">
+      </div>
+      <div id="station-wrapper">
+        <div class="station">
+          <h1>서울역</h1>
+        </div>
+        <div class="station">
+          <h1>용산역</h1>
+        </div>
+        <div class="station">
+          <h1>노량진역</h1>
+        </div>
+        <div class="station">
+          <h1>영등포역</h1>
+        </div>
+        <div class="station">
+          <h1>오류동역</h1>
+        </div>
+        <div class="station">
+          <h1>부천역</h1>
+        </div>
+        <div class="station">
+          <h1>주안역</h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="cover">
+      <img src="img/play-background-default.jpg" width="100%">
+    </div>
+  </div>
+
+  <div id="bottom">
+    <div id="controller">
+      <div id="play-button-container">
+        <button id="play-button" class="amplitude-play-pause">
+          <!--<span>재생하기</span>-->
+        </button>
+      </div>
+      <div id="player-progress-bar-container">
+        <progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
+        <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+      </div>
+      <div id="volume-container">
+        <img src="./img/volume.svg"/>
+        <input type="range" class="amplitude-volume-slider vertical-slider" step=".1" min="0" max="100" value="50" />
+      </div>
+    </div>
+
+    <!--가사 및 싱크 영역-->
+    <div>
+      <span style="margin: 0 auto; text-align: center; width: 100%; display: block;" class="amplitude-current-time"></span>
+    </div>
+    <div id="lyrics-mask-container">
+      <div id="lyrics-container">
+        <div class="lyric-line" data-time="0">한양을 작별하는 기적소리는</div>
+        <div class="lyric-line" data-time="10">연화봉을 진동하며 작별을 하고</div>
+        <div class="lyric-line" data-time="15">한 바퀴 두 바퀴는 차례로 굴러</div>
+        <div class="lyric-line" data-time="24">종남산의 취색은 등에 걸렸네.</div>
+        <div class="lyric-line" data-time="29">변화한 좌우 시가 다투어 비키고</div>
+        <div class="lyric-line" data-time="34">굉-굉한 바퀴 소리는 땅을 가르는데</div>
+        <div class="lyric-line" data-time="39">천지를 울리는 기적 일성은</div>
+        <div class="lyric-line" data-time="49">장려한 용산역을 부수는 구나</div>
+        <div class="lyric-line" data-time="57">경원선과 경부선을 서로 나누어</div>
+        <div class="lyric-line" data-time="63">한 마디 기적으로 고별을 하고</div>
+        <div class="lyric-line" data-time="68">웅장한 남한강의 철교를 지나</div>
+        <div class="lyric-line" data-time="77">철도 요람 노량진역에 다다랐도다</div>
+        <div class="lyric-line" data-time="82">살같이 나타나는 장엄한 기차</div>
+        <div class="lyric-line" data-time="87">어언듯 영등포 잠깐 거치어</div>
+        <div class="lyric-line" data-time="92">부산행 급행을 멀리 보내고</div>
+        <div class="lyric-line" data-time="101">오류동 정거장 지내였고나</div>
+        <div class="lyric-line" data-time="111">넓고 넓은 소사벌을 갈라나가면</div>
+        <div class="lyric-line" data-time="116">소사역과 부평역도 차례로 거쳐</div>
+        <div class="lyric-line" data-time="120">산 넘고 물 건너 급히 다다르니</div>
+        <div class="lyric-line" data-time="130">빠르다 주안역도 지내였고나</div>
+        <div class="lyric-line" data-time="135">먼산을 굽으려 가깝게하고</div>
+        <div class="lyric-line" data-time="140">가까운 산을 뻗치어 멀게 하면서</div>
+        <div class="lyric-line" data-time="145">살 같이 빨리 부는 나는 새 같이</div>
+        <div class="lyric-line" data-time="154">어느덧 제물포에 다다랐도다</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<!--
+  Include UX functions JS
+
+  NOTE: These are for handling things outside of the scope of AmplitudeJS
+-->
+<!--<script type="text/javascript" src="/src/js/kyongin.js"></script>-->
+<script type="text/javascript" src="./src/js/function.js"></script>
+
+<!-- AmplitudeJS 초기화 -->
+<script>
+/*
+  function basicControl() {
+    document.getElementById('play-button').addEventListener('click', function() {
+      if (Amplitude.getPlayerState() === 'playing') { // 현재 재생 중이면
+        Amplitude.pause(); // 일시 정지
+      } else { // 재생 중이 아니면
+        Amplitude.play(); // 재생
+      }
+    });
+  }
+*/
+
+  // basicControl();
+
+
+  Amplitude.init({
+
+    // "debug": true,
+    "autoplay": true,
+    "callbacks": {
+      "timeupdate": function () {
+        const currentTime = Amplitude.getSongPlayedSeconds();
+
+        highlightLyric(currentTime);
+
+        // 지하철역 이동 시간지정
+        if (Math.floor(currentTime) === 50) {
+          moveToStation(1); // 예: 1번 역으로 이동
+        } else if (Math.floor(currentTime) === 78) {
+          moveToStation(2); // 예: 2번 역으로 이동
+        } else if (Math.floor(currentTime) === 88) {
+          moveToStation(3); // 예: 2번 역으로 이동
+        } else if (Math.floor(currentTime) === 102) {
+          moveToStation(4); // 예: 2번 역으로 이동
+        } else if (Math.floor(currentTime) === 300) {
+          moveToStation(5); // 예: 2번 역으로 이동
+        } else if (Math.floor(currentTime) === 300) {
+          moveToStation(6); // 예: 2번 역으로 이동
+        }
+      },
+    },
+    "bindings": {
+      32: 'play_pause'
+    },
+    "songs": [
+      {
+        "name": "경부철도가",
+        "artist": "",
+        "url": "./song/kyongbu.wav",
+        "cover_art_url": "./resources/album-art/we-are-to-answer.jpg",
+      }
+    ],
+  });
+
+  let currentStationIndex = 0;
+  const stations = document.querySelectorAll('.station');
+  // 지하철역 활성화 애니메이션
+  function moveToStation(index) {
+    // 이전 역의 클래스를 초기화
+    if (currentStationIndex > 0) {
+      stations[currentStationIndex - 1].classList.remove('active', 'blink');
+      stations[currentStationIndex - 1].classList.add('previous');
+    }
+
+    currentStationIndex = index;
+
+    // 현재 역에 active와 blink 클래스 추가
+    stations[currentStationIndex].classList.add('active', 'blink');
+
+    // train-img의 위치를 현재 활성화된 역의 위치로 변경
+    const trainImg = document.getElementById('train-img');
+    const stationPosition = stations[currentStationIndex].getBoundingClientRect().left;
+
+    // console.log('station Position : ' + stationPosition)
+    // console.log('train Img Position : '+ trainImg.getBoundingClientRect().top)
+    trainImg.style.left = stationPosition - 55 + 'px';
+
+    // 500ms 후에 blink 클래스 제거하여 깜빡거리는 효과 생성
+    setTimeout(() => {
+      stations[currentStationIndex].classList.remove('blink');
+    }, 500);
+  }
+
+
+  // 테스트를 위해 2초마다 moveToStation 함수를 실행
+/*
+  setInterval(() => {
+    moveToStation(currentStationIndex);
+    currentStationIndex++;
+
+    // 모든 역을 지나면 초기화
+    if (currentStationIndex >= stations.length) {
+      currentStationIndex = 0;
+    }
+  }, 1000);
+*/
+
+
+</script>
+</html>

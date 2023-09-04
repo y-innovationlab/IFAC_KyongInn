@@ -1,0 +1,25 @@
+:root {
+  --base-path: "";
+
+  /*Color*/
+
+  --overlay-bk : #272421;
+  --bg--brown : #332D28;
+
+  --border-radius--default : 20px;
+
+  --opacity-white :rgba(255, 255, 255, 0.5);
+
+  /*Font*/
+  --myongjo : 'Nanum Myeongjo', serif;
+
+  --font-black : #111;
+  --font-white : #fff;
+
+  /*Etc*/
+  --right-coner-radius : 0 0 400px;
+
+
+  /*Size*/
+  --volume-height :0.4vh;
+}

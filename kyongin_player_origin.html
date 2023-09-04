@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>경인철도가 (전체 초기버전)</title>
+
+    <!-- Include font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+
+		<!-- Include Amplitude JS -->
+    <script type="text/javascript" src="src/js/amplitude.js"></script>
+		<!-- Include Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+  </head>
+  <body>
+    <div id="kyongInn">
+      <!--<div id="list-screen" class="slide-in-top">-->
+      <div id="list-screen">
+        <div id="list-screen-header" class="hide-playlist">
+          <img id="up-arrow" src="/img/up.svg"/>
+          경인 철도가
+        </div>
+
+        <!--Play List-->
+        <div id="list">
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
+            <span class="song-number-now-playing">
+              <span class="number">1</span>
+              <img class="now-playing" src="/img/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="0"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="0"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="0"></span></span>
+            </div>
+
+            <span class="song-duration">
+              3:30
+            </span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="1">
+            <span class="song-number-now-playing">
+              <span class="number">2</span>
+              <img class="now-playing" src="/img/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="1"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="1"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="1"></span></span>
+            </div>
+
+            <span class="song-duration">
+              3:16
+            </span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="2">
+            <span class="song-number-now-playing">
+              <span class="number">3</span>
+              <img class="now-playing" src="/img/now-playing.svg"/>
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="2"></span>
+              <span class="song-artist-album"><span data-amplitude-song-info="artist" data-amplitude-song-index="2"></span> - <span data-amplitude-song-info="album" data-amplitude-song-index="2"></span></span>
+            </div>
+
+            <span class="song-duration">
+              3:32
+            </span>
+          </div>
+        </div>
+
+        <div id="list-screen-footer">
+          <div id="list-screen-meta-container">
+            <span data-amplitude-song-info="name" class="song-name"></span>
+
+          </div>
+        </div>
+      </div>
+      <div id="player-screen">
+        <div class="player-header down-header">
+          <img id="down" src="/img/down.svg"/>
+          경인철도가 재생 목록
+        </div>
+        <div id="player-top">
+          <img data-amplitude-song-info="cover_art_url"/>
+          <div id="train">
+            <div class="img">
+              <img src="/img/train_single.svg"/>
+            </div>
+          </div>
+        </div>
+        <div id="player-progress-bar-container">
+          <progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
+          <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+        </div>
+        <div id="player-middle">
+          <div id="time-container">
+            <span class="amplitude-current-time time-container"></span>
+            <span class="amplitude-duration-time time-container"></span>
+          </div>
+          <div id="meta-container">
+            <span data-amplitude-song-info="name" class="song-name"></span>
+
+            <div class="song-artist-album">
+              <span data-amplitude-song-info="artist"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="player-bottom">
+          <div id="control-container">
+            <div id="prev-container">
+              <div class="amplitude-prev" id="previous"></div>
+            </div>
+
+            <div id="play-pause-container">
+              <div class="amplitude-play-pause" id="play-pause"></div>
+            </div>
+
+            <div id="next-container">
+              <div class="amplitude-next" id="next"></div>
+            </div>
+
+          </div>
+
+          <div id="volume-container">
+            <img src="/img/volume.svg"/><input type="range" class="amplitude-volume-slider" step=".1"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+
+
+	</script>
+
+  <!--
+    Include UX functions JS
+
+    NOTE: These are for handling things outside of the scope of AmplitudeJS
+  -->
+  <script type="text/javascript" src="src/js/kyongin.js"></script>
+  <script type="text/javascript" src="src/js/function.js"></script>
+</html>

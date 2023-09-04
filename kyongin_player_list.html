@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>경인철도가 (리스트 화면)</title>
+
+  <!-- Include font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+
+  <!-- Include Amplitude JS -->
+  <script type="text/javascript" src="./src/js/amplitude.js"></script>
+  <!-- Include Style Sheet -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/listOnly.css"/>
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+    <!--<img src="./img/ifac-logo.svg">-->
+  </div>
+  <div id="cover">
+    <div id="title-area">
+      <h1>경인철도가</h1>
+    </div>
+    <!--<img src="./img/cover.png" width="100%">-->
+    <div id="video-bg">
+      <video muted autoplay loop>
+        <source src="./img/train-video-square.mp4" type="video/mp4">
+        <strong>Your browser does not support the video tag.</strong>
+      </video>
+    </div>
+  </div>
+  <div id="play-button-container">
+    <button id="play-button">
+      <!--<span data-amplitude-song-info="name" class="song-name"></span>-->
+      <span>재생하기</span>
+    </button>
+  </div>
+
+  <!--Play List-->
+  <div id="list">
+
+    <!--1번 노래-->
+    <div class="song amplitude-song-container" data-amplitude-song-index="0">
+      <div class="song-meta-container">
+        <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="0"></span>
+      </div>
+    </div>
+
+    <!--2번 노래-->
+    <div class="song amplitude-song-container" data-amplitude-song-index="1">
+      <div class="song-meta-container">
+        <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="1"></span>
+      </div>
+    </div>
+
+    <!--3번 노래-->
+    <div class="song amplitude-song-container" data-amplitude-song-index="2">
+      <div class="song-meta-container">
+        <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="2"></span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+
+
+</script>
+
+<!--
+  Include UX functions JS
+
+  NOTE: These are for handling things outside of the scope of AmplitudeJS
+-->
+<script type="text/javascript" src="src/js/kyongin.js"></script>
+<script type="text/javascript" src="src/js/selectPlay.js"></script>
+</html>
