@@ -37,9 +37,6 @@
       </div>
       <div id="station-wrapper">
         <div class="station">
-          <h1>서울역</h1>
-        </div>
-        <div class="station">
           <h1>용산역</h1>
         </div>
         <div class="station">
@@ -155,17 +152,17 @@
 
         // 지하철역 이동 시간지정
         if (Math.floor(currentTime) === 50) {
-          moveToStation(1); // 예: 1번 역으로 이동
+          moveToStation(0); // 예: 1번 역으로 이동
         } else if (Math.floor(currentTime) === 78) {
-          moveToStation(2); // 예: 2번 역으로 이동
+          moveToStation(1); // 예: 2번 역으로 이동
         } else if (Math.floor(currentTime) === 88) {
-          moveToStation(3); // 예: 2번 역으로 이동
+          moveToStation(2); // 예: 2번 역으로 이동
         } else if (Math.floor(currentTime) === 102) {
+          moveToStation(3); // 예: 2번 역으로 이동
+        } else if (Math.floor(currentTime) === 117) {
           moveToStation(4); // 예: 2번 역으로 이동
-        } else if (Math.floor(currentTime) === 300) {
+        } else if (Math.floor(currentTime) === 132) {
           moveToStation(5); // 예: 2번 역으로 이동
-        } else if (Math.floor(currentTime) === 300) {
-          moveToStation(6); // 예: 2번 역으로 이동
         }
       },
     },

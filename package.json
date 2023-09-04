@@ -6,7 +6,19 @@
   "scripts": {
     "start": "electron .",
     "electron": "electron .",
-    "electron:window": "SET ELECTRON_START_URL=http://localhost:3000 && yarn electron"
+    "electron:window": "SET ELECTRON_START_URL=http://localhost:3000 && yarn electron",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build-win": "electron-builder --win"
+  },
+  "build": {
+    "appId": "KyongInn",
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    }
   },
   "keywords": [
     "html5",

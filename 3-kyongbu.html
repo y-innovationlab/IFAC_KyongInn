@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>경인철도가 (1번 재생 화면)</title>
+  <title>경부철도가</title>
   <base href="./">
   <!-- Include font -->
   <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
@@ -10,7 +10,7 @@
   <!-- Include Amplitude JS -->
   <script type="text/javascript" src="./src/js/amplitude.js"></script>
   <!-- Include Style Sheet -->
-<!--  <link rel="stylesheet" type="text/css" href="./css/origin.css"/>-->
+  <!--  <link rel="stylesheet" type="text/css" href="./css/origin.css"/>-->
   <link rel="stylesheet" type="text/css" href="./css/style.css"/>
   <link rel="stylesheet" type="text/css" href="./css/playOnly.css"/>
 </head>
@@ -36,9 +36,6 @@
         <img src="img/train_single.svg">
       </div>
       <div id="station-wrapper">
-        <div class="station">
-          <h1>서울역</h1>
-        </div>
         <div class="station">
           <h1>용산역</h1>
         </div>
@@ -128,17 +125,17 @@
 
 <!-- AmplitudeJS 초기화 -->
 <script>
-/*
-  function basicControl() {
-    document.getElementById('play-button').addEventListener('click', function() {
-      if (Amplitude.getPlayerState() === 'playing') { // 현재 재생 중이면
-        Amplitude.pause(); // 일시 정지
-      } else { // 재생 중이 아니면
-        Amplitude.play(); // 재생
-      }
-    });
-  }
-*/
+  /*
+    function basicControl() {
+      document.getElementById('play-button').addEventListener('click', function() {
+        if (Amplitude.getPlayerState() === 'playing') { // 현재 재생 중이면
+          Amplitude.pause(); // 일시 정지
+        } else { // 재생 중이 아니면
+          Amplitude.play(); // 재생
+        }
+      });
+    }
+  */
 
   // basicControl();
 
@@ -155,17 +152,17 @@
 
         // 지하철역 이동 시간지정
         if (Math.floor(currentTime) === 50) {
-          moveToStation(1); // 예: 1번 역으로 이동
+          moveToStation(0); // 예: 1번 역으로 이동
         } else if (Math.floor(currentTime) === 78) {
-          moveToStation(2); // 예: 2번 역으로 이동
+          moveToStation(1); // 예: 2번 역으로 이동
         } else if (Math.floor(currentTime) === 88) {
-          moveToStation(3); // 예: 2번 역으로 이동
+          moveToStation(2); // 예: 2번 역으로 이동
         } else if (Math.floor(currentTime) === 102) {
+          moveToStation(3); // 예: 2번 역으로 이동
+        } else if (Math.floor(currentTime) === 117) {
           moveToStation(4); // 예: 2번 역으로 이동
-        } else if (Math.floor(currentTime) === 300) {
+        } else if (Math.floor(currentTime) === 132) {
           moveToStation(5); // 예: 2번 역으로 이동
-        } else if (Math.floor(currentTime) === 300) {
-          moveToStation(6); // 예: 2번 역으로 이동
         }
       },
     },
@@ -174,9 +171,9 @@
     },
     "songs": [
       {
-        "name": "경부철도가",
+        "name": "조선철도창가",
         "artist": "",
-        "url": "./song/kyongbu.wav",
+        "url": "./song/josun.wav",
         "cover_art_url": "./resources/album-art/we-are-to-answer.jpg",
       }
     ],
@@ -213,17 +210,17 @@
 
 
   // 테스트를 위해 2초마다 moveToStation 함수를 실행
-/*
-  setInterval(() => {
-    moveToStation(currentStationIndex);
-    currentStationIndex++;
+  /*
+    setInterval(() => {
+      moveToStation(currentStationIndex);
+      currentStationIndex++;
 
-    // 모든 역을 지나면 초기화
-    if (currentStationIndex >= stations.length) {
-      currentStationIndex = 0;
-    }
-  }, 1000);
-*/
+      // 모든 역을 지나면 초기화
+      if (currentStationIndex >= stations.length) {
+        currentStationIndex = 0;
+      }
+    }, 1000);
+  */
 
 
 </script>
