@@ -4,3 +4,11 @@
 node_modules
 dist
 .cache
+
+./song/
+/song
+/song/
+
+*.mp3
+*.mp4
+*.wave
