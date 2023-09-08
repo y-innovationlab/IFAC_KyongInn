@@ -49,7 +49,7 @@ div#header img {
 }
 
 div#header button {
-  font-family: var(--myongjo);
+  font-family: var(--hahmlet);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,6 +81,7 @@ div#header button span {
 }
 
 #train-info {
+  font-family: var(--hahmlet);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -111,8 +112,28 @@ div#header button span {
   top: -50px;
 }
 
+/*#train-line {
+  position: relative;
+  width: 100%;
+  margin-top: 650px;
+}
+
+#train-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left 1s;
+}*/
+
+.station {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+}
+
 #train-line #train-img img {
   width: 120px;
+  left: 75px;
 }
 
 /*Station Style*/
@@ -144,7 +165,7 @@ div#header button span {
 .station h1 {
   margin-top: 1vh;
   font-size: 24px;
-  font-family: var(--myongjo);
+  font-family: var(--hahmlet);
   color: var(--font-white);
   font-weight: 500;
   letter-spacing: 0.5em;
@@ -169,15 +190,15 @@ div#header button span {
 
 /*Station Effect*/
 .station.active::before {
-  background-color: #FF4D00;
+  background-color: var(--active-color);
 }
 
 .station.previous::before {
-  /*background-color: blue;*/
+  background-color: blue;
 }
 
 .station.blink::before {
-  background-color: orange;
+  background-color: var(--blink-color);
 }
 
 #cover {
@@ -241,7 +262,7 @@ div#list div.song div.song-meta-container {
 
 div#list div.song div.song-meta-container span.song-name {
   font-size: 40px;
-  font-family: var(--myongjo);
+  font-family: var(--hahmlet);
   font-weight: 900;
   color: var(--font-white);
   opacity: 0.7;
@@ -396,7 +417,7 @@ div#play-button-container span {
   width: fit-content;
   margin: 0 auto;
   font-size: 40px;
-  font-family: var(--myongjo);
+  font-family: var(--hahmlet);
   color: var(--font-white);
   line-height: 100px;
   opacity: 0.5; /* 활성화되지 않은 가사의 투명도 */
@@ -526,8 +547,8 @@ div#volume-container input[type="range"].amplitude-volume-slider {
   cursor: pointer;
   -webkit-appearance: none;
   padding: 0;
-  background: white;
-  color: orangered;
+  background: var(--volume-bar-color);
+  color: var(--volume-control-color);
   border-radius: var(--border-radius--default);
   margin-left: 3vw;
 }

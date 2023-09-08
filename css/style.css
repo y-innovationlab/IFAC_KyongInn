@@ -5,21 +5,40 @@
 
   --overlay-bk : #272421;
   --bg--brown : #332D28;
-
-  --border-radius--default : 20px;
+  --active-color : #FF4D00;
+  --blink-color : red;
+  --volume-bar-color : rgba(255, 255, 255, 0.5);
+  --volume-control-color : #ffffff;
 
   --opacity-white :rgba(255, 255, 255, 0.5);
 
   /*Font*/
-  --myongjo : 'Nanum Myeongjo', serif;
+  --hahmlet : 'Hahmlet', serif;
+  --suit : 'Suit', serif;
 
   --font-black : #111;
   --font-white : #fff;
 
   /*Etc*/
   --right-coner-radius : 0 0 400px;
-
+  --border-radius--default : 20px;
 
   /*Size*/
   --volume-height :0.4vh;
+}
+
+body {
+  font-family: var(--hahmlet);
+}
+
+.test {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding: 0 10%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  z-index: 9;
+  gap: 8px;
 }

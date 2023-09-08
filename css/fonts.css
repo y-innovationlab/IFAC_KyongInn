@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Hahmlet';
+  src: url(../asset/Hahmlet-Light.ttf); format('ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hahmlet';
+  src: url(../asset/Hahmlet-Regular.ttf); format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hahmlet';
+  src: url(../asset/Hahmlet-Medium.ttf); format('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hahmlet';
+  src: url(../asset/Hahmlet-SemiBold.ttf); format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hahmlet';
+  src: url(../asset/Hahmlet-Bold.ttf); format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hahmlet';
+  src: url(../asset/Hahmlet-ExtraBold.ttf); format('ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hahmlet';
+  src: url(../asset/Hahmlet-Black.ttf); format('ttf');
+  font-weight: 900;
+  font-style: normal;
+}
