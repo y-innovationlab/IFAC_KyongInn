@@ -42,3 +42,17 @@ body {
   z-index: 9;
   gap: 8px;
 }
+
+
+/*역 도착 시 깜빡이는 효과*/
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

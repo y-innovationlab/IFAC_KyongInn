@@ -108,22 +108,9 @@ div#header button span {
 
 #train-line #train-img {
   position: absolute;
-  transition: all 1s ease-in-out;
+  transition: all 1s cubic-bezier(.25, .80, .30, 1);
   top: -50px;
 }
-
-/*#train-line {
-  position: relative;
-  width: 100%;
-  margin-top: 650px;
-}
-
-#train-img {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: left 1s;
-}*/
 
 .station {
   position: absolute;
