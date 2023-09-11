@@ -14,7 +14,8 @@
 
   /*Font*/
   --hahmlet : 'Hahmlet', serif;
-  --suit : 'Suit', serif;
+  --nanum : 'nanum', serif;
+  --suit : 'Suit', san-serif;
 
   --font-black : #111;
   --font-white : #fff;

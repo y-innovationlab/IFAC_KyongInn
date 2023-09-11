@@ -1,3 +1,4 @@
+/*
 @font-face {
   font-family: 'Hahmlet';
   src: url(../asset/Hahmlet-Light.ttf); format('ttf');
@@ -44,5 +45,27 @@
   font-family: 'Hahmlet';
   src: url(../asset/Hahmlet-Black.ttf); format('ttf');
   font-weight: 900;
+  font-style: normal;
+}
+*/
+
+@font-face {
+  font-family: 'nanum';
+  src: url(../asset/nanum-regular.otf); format('otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nanum';
+  src: url(../asset/nanum-bold.otf); format('otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nanum';
+  src: url(../asset/nanum-extraBold.otf); format('otf');
+  font-weight: 500;
   font-style: normal;
 }
