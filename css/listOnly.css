@@ -7,6 +7,7 @@ body {
   background: url("../img/bg.jpg") no-repeat center;
   background-size: cover;
   aspect-ratio: 1080 / 1920;
+	font-family: var(--nanum);
   /* 다른 브라우저 호환성을 위한 추가 속성 */
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none;    /* Firefox */
@@ -33,12 +34,14 @@ div#container {
 }
 
 div#header {
-  display: flex;
-  justify-content: flex-start;
-  height: auto;
-  position: relative;
-  margin-bottom: 70px;
-  padding: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	padding: 30px;
+	/*margin-bottom: 70px;*/
+	height: 80px;
+	z-index: 2;
 }
 
 #header img {
@@ -55,8 +58,9 @@ div#header {
 }
 
 #title-area h1 {
-  font-family: var(--hahmlet);
+  font-family: var(--nanum);
   font-size: 74px;
+	letter-spacing: 0.1em;
   color: var(--font-white);
   z-index: 2;
   /*text-shadow: 0 0 20px rgba(0,0,0,0.6);*/
@@ -111,7 +115,8 @@ div#list {
 }
 
 div.song.amplitude-song-container {
-  aspect-ratio: 265 / 525;
+  /*aspect-ratio: 265 / 525;*/
+  aspect-ratio: 265 / 625;
   border-radius: var(--border-radius--default);
 }
 
@@ -156,12 +161,23 @@ div#list div.song div.song-meta-container {
 
 div#list div.song div.song-meta-container span.song-name {
   font-size: 40px;
-  font-family: var(--hahmlet);
+  font-family: var(--nanum);
   font-weight: 900;
   color: var(--font-white);
   opacity: 0.7;
   letter-spacing: 5px;
   display: block;
+}
+
+div#list div.song div.song-meta-container span.ver {
+	font-size: 24px;
+	text-align: center;
+	color: var(--font-white);
+	opacity: 0.7;
+	margin-top: 15px;
+	writing-mode: initial;
+	width: 80px;
+	text-orientation: unset;
 }
 
 div#list div.song div.song-meta-container span.song-artist-album {
@@ -196,7 +212,8 @@ div#play-button-container {
   justify-content: center;
   align-items: center;
   padding: 3rem 70px;
-  margin-top: 970px;
+  /*margin-top: 970px;*/
+  margin-top: 910px;
   box-sizing: border-box;
 }
 

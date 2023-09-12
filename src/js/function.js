@@ -1,3 +1,11 @@
+// 페이지 로딩 중일 때 loading 클래스 추가
+document.body.classList.add('loading');
+
+// 페이지 로딩 완료 후 loading 클래스 제거
+window.addEventListener('load', function() {
+	document.body.classList.remove('loading');
+});
+
 function progressBar() {
   var isDragging = false; // 드래그 중인지 확인하는 플래그
 
@@ -55,6 +63,7 @@ function goBack() {
 // Touch Screen
 let isUserDragging = false;
 
+/*
 function touchScreen() {
   let isDragging = false;
   let startY;
@@ -110,8 +119,9 @@ function touchScreen() {
     }, 100);
   });
 }
+*/
 
-touchScreen();
+// touchScreen();
 
 function adjustOpacityForSurroundingLines() {
   const highlightedLine = document.querySelector('.lyric-line.highlighted');
