@@ -31,14 +31,14 @@
 body {
   font-family: var(--hahmlet);
 	opacity: 1;
-	transition: all 0.8s ease-in-out;
+	transition: all 1.4s ease-in-out;
 	transform: translateX(0);
 	background-image: url("../img/play-bg.png");
 }
 
 body.loading {
 	opacity: 0;
-	transform: translateX(-5%);
+	transform: translateX(-20px);
 }
 
 .test {

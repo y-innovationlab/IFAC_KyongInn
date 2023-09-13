@@ -159,16 +159,16 @@
 
   /*시간별 구간으로 기차 이미지 이동 구현*/
   const timeIntervals = [
-	  {start: 0, end: 38, station: 0, name: '서울역'},
-	  {start: 39, end: 62, station: 1, name: '용산역'},
-	  {start: 63, end: 82, station: 2, name: '노량진역'},
-	  {start: 83, end: 91, station: 3, name: '영등포역'},
-	  {start: 91, end: 110, station: 4, name: '오류동역'},
-	  {start: 111, end: 115, station: 5, name: '부천역'},
-	  {start: 116, end: 120, station: 6, name: '부평역'},
-	  {start: 121, end: 130, station: 7, name: '주안역'},
-	  {start: 131, end: 139, station: 8, name: '동인천역'},
-	  {start: 140, end: 168, station: 9, name: '인천역'},
+	  {start: 0, end: 28, station: 0, name: '서울역'},
+	  {start: 29, end: 49, station: 1, name: '용산역'},
+	  {start: 50, end: 57, station: 2, name: '노량진역'},
+	  {start: 58, end: 66, station: 3, name: '영등포역'},
+	  {start: 67, end: 78, station: 4, name: '오류동역'},
+	  {start: 79, end: 83, station: 5, name: '부천역'},
+	  {start: 84, end: 89, station: 6, name: '부평역'},
+	  {start: 90, end: 95, station: 7, name: '주안역'},
+	  {start: 96, end: 102, station: 8, name: '동인천역'},
+	  {start: 103, end: 119, station: 9, name: '인천역'},
   ];
 
   /*Move To Station Function*/
@@ -242,62 +242,62 @@
 	  {
 		  station: 0,
 		  titles: ['남대문정거장<br/>경성역', '서울역'],
-		  description: ['1925년 모습', '현재 모습'],
-		  images: ['./img/station-thumb/1-1.png', './img/station-thumb/1-c-1.png']
+		  description: ['1929년 모습', '현재 모습'],
+		  images: ['./img/station-thumb/1-1.png', './img/station-thumb/1-c-3.png']
 	  },
 	  {
 		  station: 1,
 		  titles: ['용산역'],
 		  description: ['1915년 모습', '현재 모습'],
-		  images: ['./img/station-thumb/2-1.png', './img/station-thumb/2-c-1.png']
+		  images: ['./img/station-thumb/2-1.png', './img/station-thumb/2-c-3.png']
 	  },
 	  {
 		  station: 2,
 		  titles: ['노량진역'],
 		  description: ['과거 모습', '현재 모습'],
-		  images: ['./img/station-thumb/r-1.png', './img/station-thumb/3-c-1.png']
+		  images: ['./img/station-thumb/r-4.png', './img/station-thumb/3-c-3.png']
 	  },
 	  {
 		  station: 3,
 		  titles: ['영등포역'],
 		  description: ['과거 모습', '현재 모습'],
-		  images: ['./img/station-thumb/r-2.png', './img/station-thumb/4-c-1.png']
+		  images: ['./img/station-thumb/r-5.png', './img/station-thumb/4-c-3.png']
 	  },
 	  {
 		  station: 4,
 		  titles: ['오류동역'],
 		  description: ['과거 모습', '현재 모습'],
-		  images: ['./img/station-thumb/r-3.png', './img/station-thumb/5-c-1.png']
+		  images: ['./img/station-thumb/r-6.png', './img/station-thumb/5-c-2.png']
 	  },
 	  {
 		  station: 5,
 		  titles: ['부천역', '소사역'],
 		  description: ['과거 모습', '현재 모습'],
-		  images: ['./img/station-thumb/r-4.png', './img/station-thumb/6-c-1.png']
+		  images: ['./img/station-thumb/r-7.png', './img/station-thumb/6-c-3.png']
 	  },
 	  {
 		  station: 6,
 		  titles: ['부평역'],
 		  description: ['과거 모습', '현재 모습'],
-		  images: ['./img/station-thumb/r-5.png', './img/station-thumb/7-c-1.png']
+		  images: ['./img/station-thumb/r-8.png', './img/station-thumb/7-c-2.png']
 	  },
 	  {
 		  station: 7,
 		  titles: ['주안역'],
 		  description: ['과거 모습', '현재 모습'],
-		  images: ['./img/station-thumb/r-6.png', './img/station-thumb/8-c-1.png']
+		  images: ['./img/station-thumb/r-9.png', './img/station-thumb/8-c-2.png']
 	  },
 	  {
 		  station: 8,
 		  titles: ['동인천역', '축현역'],
 		  description: ['과거 모습', '현재 모습'],
-		  images: ['./img/station-thumb/9-1.png', './img/station-thumb/9-c-1.png']
+		  images: ['./img/station-thumb/9-1.png', './img/station-thumb/9-c-2.png']
 	  },
 	  {
 		  station: 9,
 		  titles: ['인천역', '제물포역'],
 		  description: ['과거 모습', '현재 모습'],
-		  images: ['./img/station-thumb/10-1.png', './img/station-thumb/10-c-1.png']
+		  images: ['./img/station-thumb/10-3.png', './img/station-thumb/10-c-3.png']
 	  }
 
 
@@ -360,7 +360,7 @@
 					  trainNameElement.classList.remove('fade-out');
 					  trainDescriptionElement.classList.remove('fade-out');
 					  coverElement.classList.remove('fade-out');
-				  }, 800); // fade-out 애니메이션의 절반 시간에 이미지 교체
+				  }, 400); // fade-out 애니메이션의 절반 시간에 이미지 교체
 
 				  // Update the currentTitle and currentImage
 				  currentTitle = newTitle;

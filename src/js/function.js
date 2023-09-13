@@ -2,8 +2,10 @@
 document.body.classList.add('loading');
 
 // 페이지 로딩 완료 후 loading 클래스 제거
-window.addEventListener('load', function() {
-	document.body.classList.remove('loading');
+document.addEventListener('DOMContentLoaded', function() {
+	requestAnimationFrame(function() {
+		document.body.classList.remove('loading');
+	});
 });
 
 function progressBar() {
