@@ -12,3 +12,9 @@ dist
 *.mp3
 *.mp4
 *.wave
+
+
+/.idea
+.idea
+.idea/
+*.iml
