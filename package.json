@@ -1,40 +1,42 @@
 {
-  "name": "Kyong-Inn",
-  "version": "1.0.0",
-  "description": "Kyong Inn Subway Song Audio Player",
-  "main": "electron.js",
-  "scripts": {
-    "start": "electron .",
-    "electron": "electron .",
-    "electron:window": "SET ELECTRON_START_URL=http://localhost:3000 && yarn electron",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "build-win": "electron-builder --win"
+  "name"        : "Kyong-Inn",
+  "version"     : "1.0.0",
+  "description" : "Kyong Inn Subway Song Audio Player",
+  "main"        : "electron.js",
+  "scripts"     : {
+    "start"           : "electron .",
+    "electron"        : "electron .",
+    "electron:window" : "SET ELECTRON_START_URL=http://localhost:3000 && yarn electron",
+    "pack"            : "electron-builder --dir",
+    "dist"            : "electron-builder",
+    "build-win"       : "electron-builder --win"
   },
-  "build": {
-    "appId": "KyongInn",
-    "win": {
-      "target": "nsis"
+  "build"       : {
+    "appId"           : "KyongInn",
+    "win"             : {
+      "target" : [
+        "nsis",
+        "portable"
+      ],
+      "mac"    : {
+        "target" : "dmg"
+      }
     },
-    "mac": {
-      "target": "dmg"
+    "keywords"        : [
+      "html5",
+      "audio",
+      "amplitudejs"
+    ],
+    "author"          : "Y Innovation Lab",
+    "license"         : "MIT",
+    "devDependencies" : {
+      "electron"         : "^26.0.0",
+      "electron-builder" : "^24.6.3",
+      "electron-reload"  : "^2.0.0-alpha.1",
+      "husky"            : "^8.0.3"
+    },
+    "dependencies"    : {
+      "amplitudejs"   : "latest",
+      "rabbit-lyrics" : "^2.1.1"
     }
-  },
-  "keywords": [
-    "html5",
-    "audio",
-    "amplitudejs"
-  ],
-  "author": "Y Innovation Lab",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^26.0.0",
-    "electron-builder": "^24.6.3",
-    "electron-reload": "^2.0.0-alpha.1",
-    "husky": "^8.0.3"
-  },
-  "dependencies": {
-    "amplitudejs": "latest",
-    "rabbit-lyrics": "^2.1.1"
   }
-}

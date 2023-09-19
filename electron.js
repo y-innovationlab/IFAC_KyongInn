@@ -12,11 +12,11 @@ ipcMain.on('get-dirname', (event) => {
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1080,
+    height: 1920,
     icon: imagePath,
     frame: false,
-    kiosk: false,
+    kiosk: true,
     // titleBarStyle: 'hidden',
     // transparent: true,
     webPreferences: {
