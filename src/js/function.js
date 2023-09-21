@@ -35,7 +35,7 @@ function progressBar() {
   }
 }
 
-progressBar();
+// progressBar();
 
 
 /*function listControl() {

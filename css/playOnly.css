@@ -336,12 +336,12 @@ div#play-button-container #play-button {
 }
 
 div#play-button-container #play-button.amplitude-playing {
-	background: url("../img/play.svg") no-repeat center center;
+	background: url("../img/pause.svg") no-repeat center center;
 	background-size: contain;
 }
 
 div#play-button-container #play-button.amplitude-paused {
-	background: url("../img/pause.svg") no-repeat center center;
+	background: url("../img/play.svg") no-repeat center center;
 	background-size: contain;
 }
 
