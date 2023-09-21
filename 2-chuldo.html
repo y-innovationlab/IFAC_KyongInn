@@ -27,8 +27,8 @@
   <div id="top-container">
 
     <div id="train-info">
-      <div id="train-name">용산역</div>
-      <div id="train-description">1955년 모습</div>
+      <div id="train-name"></div>
+      <div id="train-description"></div>
     </div>
 
     <div id="train-line">
@@ -85,27 +85,27 @@
 		    <div class="lyric-line" data-order="1" data-time="4">한양을 작별하는 기적소리는</div>
         <div class="lyric-line" data-order="2" data-time="8">연화봉을 진동하며 작별을 하고</div>
         <div class="lyric-line" data-order="3" data-time="12">한 바퀴 두 바퀴는 차례로 굴러</div>
-        <div class="lyric-line" data-order="4" data-time="16">종남산의 취색은 등에 멀었네</div>
+        <div class="lyric-line" data-order="4" data-time="17">종남산의 취색은 등에 멀었네</div>
 		    <br/><br/>
         <div class="lyric-line" data-order="5" data-time="21">변화한 좌우 시가 다투어 비키고</div>
         <div class="lyric-line" data-order="6" data-time="25">굉-굉한 바퀴 소리는 땅을 가르는데</div>
         <div class="lyric-line" data-order="7" data-time="29">천지를 울리는 기적 일성은</div>
         <div class="lyric-line" data-order="8" data-time="33">장려한 용산역을 부수는 구나</div>
 		    <br/><br/>
-        <div class="lyric-line" data-order="9" data-time="42">경원선과 경부선을 서로 나누어</div>
+        <div class="lyric-line" data-order="9" data-time="41">경원선과 경부선을 서로 나누어</div>
         <div class="lyric-line" data-order="10" data-time="46">한 마디 기적으로 고별을 하고</div>
         <div class="lyric-line" data-order="11" data-time="50">웅장한 남한강의 철교를 지나</div>
         <div class="lyric-line" data-order="12" data-time="54">철도 요람 노량진역에 다다랐도다</div>
 		    <br/><br/>
         <div class="lyric-line" data-order="13" data-time="58">살같이 나타나는 장엄한 기차</div>
-        <div class="lyric-line" data-order="14" data-time="63">어언듯 영등포 잠깐 거치어</div>
-        <div class="lyric-line" data-order="15" data-time="67">부산행 급행을 멀리 보내고</div>
+        <div class="lyric-line" data-order="14" data-time="62">어언듯 영등포 잠깐 거치어</div>
+        <div class="lyric-line" data-order="15" data-time="66">부산행 급행을 멀리 보내고</div>
         <div class="lyric-line" data-order="16" data-time="71">오류동 정거장 지내였고나</div>
 		    <br/><br/>
         <div class="lyric-line" data-order="17" data-time="79">넓고 넓은 소사벌을 갈라나가면</div>
         <div class="lyric-line" data-order="18" data-time="83">소사역과 부평역도 차례로 거쳐</div>
         <div class="lyric-line" data-order="19" data-time="87">산 넘고 물 건너 급히 다다르니</div>
-        <div class="lyric-line" data-order="20" data-time="92">빠르다 주안역도 지내였고나</div>
+        <div class="lyric-line" data-order="20" data-time="91">빠르다 주안역도 지내였고나</div>
 		    <br/><br/>
         <div class="lyric-line" data-order="21" data-time="96">먼산을 굽으려 가깝게하고</div>
         <div class="lyric-line" data-order="22" data-time="100">가까운 산을 뻗치어 멀게 하면서</div>
@@ -237,8 +237,8 @@
 	  }
   }
 
-  /*Change Info Function*/
-  const stationDetails = [
+  /*Change Info Function 아카이브*/
+  /*const stationDetails = [
 	  {
 		  station: 0,
 		  titles: ['경성역', '서울역'],
@@ -304,7 +304,75 @@
 
 
 	  // ... 나머지 역에 대한 정보도 동일하게 추가 ...
-  ];
+  ];*/
+
+  const stationDetails = [
+   {
+   station: 0,
+   titles: ['경성역', '서울역'],
+   description: ['1929년 모습', '현재 모습'],
+   images: ['./img/station-thumb/1-1.png', './img/station-thumb/1-c-3.png']
+   },
+   {
+   station: 1,
+   titles: ['용산역'],
+   description: ['1915년 모습', '현재 모습'],
+   images: ['./img/station-thumb/2-1.png', './img/station-thumb/2-c-3.png']
+   },
+   {
+   station: 2,
+   titles: ['노량진역'],
+   description: [''],
+   images: ['./img/station-thumb/r-4.png', './img/station-thumb/3-c-3.png']
+   },
+   {
+   station: 3,
+   titles: ['영등포역'],
+   description: [''],
+   images: ['./img/station-thumb/r-5.png', './img/station-thumb/4-c-3.png']
+   },
+   {
+   station: 4,
+   titles: ['오류동역'],
+   description: [''],
+   images: ['./img/station-thumb/r-6.png', './img/station-thumb/5-c-2.png']
+   },
+   {
+   station: 5,
+   titles: ['부천역', '소사역'],
+   description: [''],
+   images: ['./img/station-thumb/r-7.png', './img/station-thumb/6-c-3.png']
+   },
+   {
+   station: 6,
+   titles: ['부평역'],
+   description: [''],
+   images: ['./img/station-thumb/r-8.png', './img/station-thumb/7-c-2.png']
+   },
+   {
+   station: 7,
+   titles: ['주안역'],
+   description: [''],
+   images: ['./img/station-thumb/r-9.png', './img/station-thumb/8-c-2.png']
+   },
+   {
+   station: 8,
+   titles: ['동인천역', '축현역'],
+   description: [''],
+   images: ['./img/station-thumb/9-1.png', './img/station-thumb/9-c-2.png']
+   },
+   {
+   station: 9,
+   titles: ['인천역', '제물포역'],
+   description: [''],
+   images: ['./img/station-thumb/10-3.png', './img/station-thumb/10-c-3.png']
+   }
+
+
+
+
+   // ... 나머지 역에 대한 정보도 동일하게 추가 ...
+   ];
 
   function getIntervalByTime(currentTime) {
 	  for (let interval of timeIntervals) {

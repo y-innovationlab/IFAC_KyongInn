@@ -149,11 +149,14 @@ function adjustOpacityForSurroundingLines() {
     if (index - 1 >= 0) {
       siblings[index - 2].style.filter = 'blur(2px)';
       siblings[index - 3].style.filter = 'blur(2px)';
+      siblings[index - 4].style.filter = 'blur(2px)';
     }
 
     // 다음 가사의 투명도를 위한 filter 적용
     if (index + 1 < siblings.length) {
       siblings[index + 2].style.filter = 'blur(2px)';
+      siblings[index + 3].style.filter = 'blur(2px)';
+      siblings[index + 4].style.filter = 'blur(2px)';
     }
 
     // 마지막 줄에 도달했을 때
