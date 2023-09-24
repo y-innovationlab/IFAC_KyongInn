@@ -17,7 +17,8 @@ function createWindow() {
     icon: imagePath,
     frame: false,
     kiosk: true,
-    // titleBarStyle: 'hidden',
+		fullScreen: true,
+    titleBarStyle: 'hidden',
     // transparent: true,
     webPreferences: {
       nodeIntegration: false,
